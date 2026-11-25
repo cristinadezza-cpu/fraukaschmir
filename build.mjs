@@ -154,6 +154,11 @@ write('/impressum/', legalPage('/impressum/', impressum));
 write('/datenschutz/', legalPage('/datenschutz/', datenschutz));
 
 writeFileSync(
+  'dist/404.html',
+  layout({ path: '/404.html', title: 'Seite nicht gefunden – Frau Kaschmir', description: '', active: '', robots: 'noindex',
+    body: '<section class="legal"><h1>Seite nicht gefunden</h1><p>Diese Seite gibt es leider nicht. <a href="/">Zur Startseite</a></p></section>' })
+);
+writeFileSync(
   'dist/sitemap.xml',
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${ORIGIN}/</loc></url>\n  <url><loc>${ORIGIN}/kontakt/</loc></url>\n</urlset>\n`
 );
