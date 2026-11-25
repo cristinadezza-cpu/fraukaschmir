@@ -131,7 +131,11 @@ function legalPage(path, data) {
   const html = data.body
     .split(/\n{2,}/)
     .map((block) =>
-      block.startsWith('## ') ? `<h2>${esc(block.slice(3))}</h2>` : `<p>${lines(block)}</p>`
+      block.startsWith('### ')
+        ? `<h3>${esc(block.slice(4))}</h3>`
+        : block.startsWith('## ')
+        ? `<h2>${esc(block.slice(3))}</h2>`
+        : `<p>${lines(block)}</p>`
     )
     .join('\n');
   const body = `<section class="legal"><h1>${esc(data.title)}</h1>\n${html}\n</section>`;

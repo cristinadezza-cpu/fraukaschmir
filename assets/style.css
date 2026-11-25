@@ -59,6 +59,7 @@ h1,h2,h3{margin:0;color:var(--red);font-weight:400}
 .legal{max-width:760px;margin:40px auto 100px;padding:0 24px}
 .legal h1{font-size:clamp(28px,4vw,40px);margin-bottom:26px}
 .legal h2{font-size:20px;font-weight:700;margin:32px 0 8px}
+.legal h3{font-size:17px;font-weight:700;color:var(--red);margin:26px 0 6px}
 .legal p{margin:0 0 14px}
 
 /* Fußzeile */
