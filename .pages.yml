@@ -1,0 +1,75 @@
+media:
+  input: assets/img
+  output: /assets/img
+  extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: home
+    label: Startseite
+    type: file
+    path: content/home.json
+    format: json
+    fields:
+      - { name: headline, label: Große Überschrift oben, type: string }
+      - { name: hero_image, label: Großes Bild oben, type: image }
+      - { name: hero_image_alt, label: Bildbeschreibung (für Blinde und Google), type: string }
+      - { name: hero_box_title, label: Kasten auf dem Bild – Überschrift, type: string }
+      - { name: hero_box_text, label: Kasten auf dem Bild – Text, type: text }
+      - { name: hero_button_text, label: Kasten auf dem Bild – Knopf-Text, type: string }
+      - { name: hero_button_link, label: Kasten auf dem Bild – Knopf-Link, type: string }
+      - { name: kids_text, label: Kinder-Bereich – Text (Zeilenumbruch = neue Zeile), type: text }
+      - { name: kids_image, label: Kinder-Bereich – Bild, type: image }
+      - { name: kids_image_alt, label: Kinder-Bereich – Bildbeschreibung, type: string }
+      - { name: service_title, label: Service-Bereich – Überschrift, type: string }
+      - { name: service_text, label: Service-Bereich – Text, type: text }
+      - { name: service_button_text, label: Service-Bereich – Knopf-Text (ruft die Telefonnummer an), type: string }
+      - { name: service_image, label: Service-Bereich – Bild, type: image }
+      - { name: service_image_alt, label: Service-Bereich – Bildbeschreibung, type: string }
+      - { name: meta_title, label: Titel in Google, type: string }
+      - { name: meta_description, label: Beschreibung in Google, type: text }
+
+  - name: kontakt
+    label: Kontakt-Seite
+    type: file
+    path: content/kontakt.json
+    format: json
+    fields:
+      - { name: title, label: Überschrift, type: string }
+      - { name: mail_title, label: Überschrift E-Mail, type: string }
+      - { name: phone_title, label: Überschrift Telefon, type: string }
+      - { name: visit_title, label: Überschrift Adressen, type: string }
+      - { name: address_1, label: Adresse 1, type: string }
+      - { name: address_2, label: Adresse 2, type: string }
+      - { name: image, label: Bild, type: image }
+      - { name: image_alt, label: Bildbeschreibung, type: string }
+      - { name: meta_title, label: Titel in Google, type: string }
+      - { name: meta_description, label: Beschreibung in Google, type: text }
+
+  - name: site
+    label: Telefon, E-Mail, Social Media, Fußzeile
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - { name: phone_display, label: Telefonnummer (wie sie angezeigt wird), type: string }
+      - { name: phone_link, label: Telefonnummer für den Anruf-Knopf (ohne Leerzeichen, mit +49), type: string }
+      - { name: email, label: E-Mail, type: string }
+      - { name: instagram, label: Instagram-Link, type: string }
+      - { name: facebook, label: Facebook-Link, type: string }
+      - { name: copyright, label: Text ganz unten, type: string }
+
+  - name: impressum
+    label: Impressum
+    type: file
+    path: content/impressum.json
+    format: json
+    fields:
+      - { name: body, label: Text (## vor einer Zeile = Zwischenüberschrift), type: text }
+
+  - name: datenschutz
+    label: Datenschutzerklärung
+    type: file
+    path: content/datenschutz.json
+    format: json
+    fields:
+      - { name: body, label: Text (## vor einer Zeile = Zwischenüberschrift), type: text }
